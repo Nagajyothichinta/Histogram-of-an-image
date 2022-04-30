@@ -32,36 +32,33 @@ import matplotlib.pyplot as plt
 
 # Write your code to find the histogram of gray scale image and color image channels.
 
-gray_image = cv2.imread("grayscale.png")
-color_image = cv2.imread("colour.png",-1)
-cv2.imshow("Gray Image",gray_image)
-cv2.imshow("Colour Image",color_image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-
-
+import cv2
+import matplotlib.pyplot as plt
+gray_image=cv2.imread('gray images.jpg')
+hist=cv2.calcHist([gray_image],[0],None,[256],[0,256])
+plt.imshow(gray_image)
+plt.show()
+plt.figure()
+plt.title("histogram")
+plt.xlabel('grayscale value')
+plt.ylabel('pixel count')
+plt.stem(hist)
+plt.show()
 
 # Display the histogram of gray scale image and any one channel histogram from color image
 
-gray_hist = cv2.calcHist([gray_image],[0],None,[256],[0,256])
-color_hist = cv2.calcHist([color_image],[0],None,[256],[0,256])
-plt.figure()
-plt.imshow(gray_image)
-plt.show()
-plt.title("Histogram")
-plt.xlabel("Grayscale Value")
-plt.ylabel("Pixel Count")
-plt.stem(gray_hist)
-plt.show()
+import cv2
+import matplotlib.pyplot as plt
+color_image=cv2.imread('color images.jpg')
+hist=cv2.calcHist([color_image],[0],None,[256],[0,256])
 plt.imshow(color_image)
 plt.show()
-plt.title("Histogram of Color Image - Green Channel")
-plt.xlabel("Intensity Value")
-plt.ylabel("Pixel Count")
-plt.stem(color_hist)
+plt.figure()
+plt.title("histogram")
+plt.xlabel('colorscale value')
+plt.ylabel('pixel count')
+plt.stem(hist)
 plt.show()
-
 
 
 
