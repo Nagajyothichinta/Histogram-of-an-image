@@ -79,13 +79,13 @@ cv2.destroyAllWindows()
 
 ```
 ## Output:
-### Input Grayscale Image and Color Image
+### Input  Color Image and histogram
 
 ![output](./img1.png)
 ![output](./img3.png)
 
 
-### Histogram of Grayscale Image and any channel of Color Image
+### Histogram of Grayscale Image and gray image
 
 ![output](./img2.png)
 ![output](./img4.png)
